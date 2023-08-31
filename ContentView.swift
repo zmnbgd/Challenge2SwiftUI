@@ -8,16 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var possibleMoves = ["Rock", "Paper", "Scissors"]
+    
+    
+    
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [.red, .blue]), startPoint: .top, endPoint: .bottom)
+            LinearGradient(gradient: Gradient(colors: [.white, .blue]), startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea()
             VStack {
                 Spacer ()
                 
                 Text("Rock - Paper - Scissors")
                     .font(.largeTitle.weight(.bold))
-                    .foregroundColor(.white)
+                    .foregroundColor(Color(.darkGray))
                 VStack {
                     VStack {
                         
