@@ -9,20 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var possibleMoves = ["Rock", "Paper", "Scissors"]
-    
+    @State private var possibleMoves = ["Rock 👊🏼", "Paper 🤚🏼", "Scissors ✌🏼"]
+    @State private var appChoice = Int.random(in: 0..<3)
     
     
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [.white, .blue]), startPoint: .top, endPoint: .bottom)
+            LinearGradient(gradient: Gradient(colors: [.blue, .white]), startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea()
             VStack {
-                Spacer ()
-                
                 Text("Rock - Paper - Scissors")
                     .font(.largeTitle.weight(.bold))
-                    .foregroundColor(Color(.darkGray))
+                    .foregroundColor(Color(.black))
+                    .padding(.top)
                 VStack {
                     VStack {
                         
